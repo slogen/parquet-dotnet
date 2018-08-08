@@ -21,7 +21,8 @@ namespace Parquet.Test.Serialisation
                Id = i,
                NullableId = (i % 2 == 0) ? new int?() : new int?(i),
                Name = $"row {i}",
-               Date = now.AddDays(i).RoundToSecond().ToUniversalTime()
+               Date = now.AddDays(i).RoundToSecond().ToUniversalTime(),
+               Guid = Guid.NewGuid()
             })
             .ToArray();
 
@@ -39,6 +40,7 @@ namespace Parquet.Test.Serialisation
                Assert.Equal(structures[i].NullableId, structures2[i].NullableId);
                Assert.Equal(structures[i].Name, structures2[i].Name);
                Assert.Equal(structures[i].Date, structures2[i].Date);
+               Assert.Equal(structures[i].Guid, structures2[i].Guid);
             }
 
          }
@@ -53,6 +55,8 @@ namespace Parquet.Test.Serialisation
          public string Name { get; set; }
 
          public DateTimeOffset Date { get; set; }
+
+         public Guid Guid { get; set; }
       }
 
    }
