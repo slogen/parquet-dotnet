@@ -14,6 +14,7 @@ namespace Parquet.Data
          new DateTimeDataTypeHandler(),
          new IntervalDataTypeHandler(),
          new DecimalDataTypeHandler(),
+         new GuidDataTypeHandler(),
 
          // low priority types
          new BooleanDataTypeHandler(),

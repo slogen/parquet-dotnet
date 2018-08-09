@@ -122,5 +122,17 @@ namespace Parquet.Thrift
     /// particular timezone or date.
     /// </summary>
     INTERVAL = 21,
-  }
+
+     /// <summary>
+     /// A UUID.
+     /// 
+     /// This type annotates data stored as FIXED_LEN_BYTE_ARRAY of length 16.
+     /// It is stored as prescribed by RFC4122 section 4.1.2 (big-endian).
+     /// 
+     /// HACK: to be able to proceed with implementation. 
+     /// TODO: Regenerate with thrift compiler
+     /// </summary>
+     UUID = -1,
+
+   }
 }

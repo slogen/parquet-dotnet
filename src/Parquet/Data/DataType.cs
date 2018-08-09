@@ -98,7 +98,12 @@
       /// <summary>
       /// Interval
       /// </summary>
-      Interval/*,
+      Interval,
+
+      /// <summary>
+      /// Uuid
+      /// </summary>
+      Uuid/*,
 
       /// <summary>
       /// List of elements
